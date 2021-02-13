@@ -1,27 +1,33 @@
 /* AppComponent's private CSS styles */
-h1 {
-  font-size: 1.2em;
-  margin-bottom: 0;
-}
-nav a {
-  padding: 5px 10px;
-  text-decoration: none;
-  margin-top: 10px;
-  display: inline-block;
-  background-color: #eee;
-  border-radius: 4px;
-}
-nav a:visited, a:link {
-  color: #334953;
-}
-nav a:hover {
-  color: #039be5;
-  background-color: #CFD8DC;
-}
-nav a.active {
-  color: #039be5;
+
+nav{
+    margin: 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgb(224, 224, 224);
+    height: 2rem;
+
 }
 
+nav .btn{
+    border: 0;
+}
+nav a {
+    padding: 0;
+    margin-right: 3rem;
+    position: relative;
+    float: left;
+    padding-bottom: 0.59rem;
+    border-radius: 0;
+    color: #F79489;
+    font-size: 0.9rem;
+    outline: none;
+    box-shadow:none;
+}
+
+nav a.active-link{
+    border-bottom: 2px solid #F79489;
+
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.

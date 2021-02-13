@@ -8,16 +8,16 @@ import { Hero } from './hero';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 11, name: 'Dr Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 11, name: 'Dr Nice',   company: 'GOL',  phone: '11 99862-4832',   whats:'yes'},
+      { id: 12, name: 'Narco',     company: 'GOL',  phone: '11 99862-4832',   whats:'yes'},
+      { id: 13, name: 'Bombasto',  company: 'GOL',  phone: '11 99862-4832',   whats:'yes'},
+      { id: 14, name: 'Celeritas', company: 'GOL',  phone: '11 99862-4832',   whats:'yes'},
+      { id: 15, name: 'Magneta',   company: 'GOL',  phone: '11 99862-4832',   whats:'no'},
+      { id: 16, name: 'RubberMan', company: 'GOL',  phone: '11 99862-4832',   whats:'yes'},
+      { id: 17, name: 'Dynama',    company: 'GOL',  phone: '11 99862-4832',   whats:'yes'},
+      { id: 18, name: 'Dr IQ',     company: 'GOL',  phone: '11 99862-4832',   whats:'no'},
+      { id: 19, name: 'Magma',     company: 'GOL',  phone: '11 99862-4832',   whats:'yes'},
+      { id: 20, name: 'Tornado',   company: 'GOL',  phone: '11 99862-4832',   whats:'no'}
     ];
     return {heroes};
   }

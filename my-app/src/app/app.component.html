@@ -1,11 +1,14 @@
-<h1>{{title}}</h1>
+<app-nav-bar></app-nav-bar>
+<div class="container">
+<h2>{{title}}</h2>
 <nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
-<app-messages></app-messages>
+  <a class="btn" routerLink="/heroes" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">All contact</a>
+  <a class="btn" routerLink="/dashboard" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Favorite</a>
 
+</nav>
+  <router-outlet></router-outlet>
+  <!-- <app-messages></app-messages>-->
+</div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

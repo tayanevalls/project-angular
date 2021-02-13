@@ -3,74 +3,107 @@
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 15em;
+
 }
 .heroes li {
   position: relative;
   cursor: pointer;
-  background-color: #EEE;
-  margin: .5em;
+  background-color: #fff;
+  margin: .7em 0;
   padding: .3em 0;
-  height: 1.6em;
+  height: 5em;
   border-radius: 4px;
+  box-shadow: 0 0 0.875rem 0 rgb(41 48 66 / 5%);
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
 }
+.heroes li:nth-child(even) .circle{
+  background: #F8AFA6;
+}
+.heroes li.grow{
+  transition: all .2s ease-in-out;
+}
+.heroes li.grow:hover{
+  transform: scale(1.1);
+}
+.input-group-text{
+  padding: 0;
+  background-color: #f79489;
+  border: 1px solid #f79489;
 
-.heroes li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
+}
+.input-group-text button{
+  font-size: 0.8rem;
+  color: #fff ;
+}
+.form-control {
+  font-size: 0.8rem;
 }
 
 .heroes a {
-  color: #333;
   text-decoration: none;
-  position: relative;
-  display: block;
-  width: 250px;
-}
-
-.heroes a:hover {
-  color: #607D8B;
+  color: gray ;
 }
 
 .heroes .badge {
   display: inline-block;
   font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #405061;
-  line-height: 1em;
+  color: #fff ;
   position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  min-width: 16px;
-  text-align: right;
+  text-align: center;
   margin-right: .8em;
-  border-radius: 4px 0 0 4px;
+}
+.heroes .circle {
+  height: 30px;
+  width: 30px;
+  color: #fff ;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  background: #f79489;
+  padding-top: 0.3rem;
+  font-size: 1em;
+  font-weight: 400;
 }
 
-button {
-  background-color: #eee;
+.heroes button{
+  float: right;
+}
+
+.heroes .status{
+  color: #444;
   border: none;
-  padding: 5px 10px;
+  border-radius: 100px;
+  padding: 5px 16px;
+  margin-left: 8px;
+}
+.heroes .status.yes{
+  background: #c3e6ae;
+}
+.heroes .status.no{
+  background: #ff7676;
+}
+button {
+  border: none;
+  padding: 0 1rem;
   border-radius: 4px;
   cursor: pointer;
-  font-family: Arial, sans-serif;
+  background-color: transparent;
+  font-size: 1rem;
 }
 
-button:hover {
-  background-color: #cfd8dc;
+.head{
+  margin: 30px 0;
+  color: #c7c7c7;
 }
 
-button.delete {
-  position: relative;
-  left: 194px;
-  top: -32px;
-  background-color: gray !important;
-  color: white;
+.text{
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
