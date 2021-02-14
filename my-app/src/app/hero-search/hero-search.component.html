@@ -1,10 +1,11 @@
-<div id="search-component">
-  <h4><label for="search-box">Hero Search</label></h4>
 
-  <div class="d-flex">
-    <input class="form-control me-2" placeholder="Search" aria-label="Search"  #searchBox id="search-box" (input)="search(searchBox.value)" />
+  <div class="col-sm-auto" id="search-component">
+    <div class="input-group">
+      <i class="bi bi-search"></i>
+      <input class="form-control" placeholder="Search" aria-label="Search"  #searchBox id="search-box" (input)="search(searchBox.value)" />
+    </div>
+</div>
 
-  </div>
   
 
   <ul class="search-result">
@@ -14,7 +15,7 @@
       </a>
     </li>
   </ul>
-</div>
+
 
 
 <!-- 

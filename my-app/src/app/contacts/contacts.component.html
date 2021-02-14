@@ -2,12 +2,15 @@
   <div class="col">     
     <h4>My Contacts</h4>
   </div>
+  <div class="col-10 col-sm-auto">						
+    <a href="#" class="btn btn-secondary"><span>Export to Excel</span></a>
+</div>
   <div class="col-10 col-sm-auto">
     <div class="input-group">
       <input #heroName type="text" class="form-control" placeholder="Enter Name" value="" required="">
       <span class="input-group-text">
         <button (click)="add(heroName.value); heroName.value=''">
-          Add
+          Add New User
       </button>
       </span>
 
@@ -20,8 +23,8 @@
     <div class="col-3">Name</div>
     <div class="col-2">Company</div>
     <div class="col-3">Phone</div>
-    <div class="col-2">Whatsapp</div>
-    <div class="col-1">Action</div>
+    <div class="col-2">Relationship</div>
+    <div class="col-1 float-right">Action</div>
   </div>
 </div>
 
@@ -29,14 +32,12 @@
   <li *ngFor="let hero of heroes" class="grow">
     <div class="container">
       <div class="row">
-        <div class="col-1 text">
-          <span class="circle col-2">{{hero.name | shortName}}</span>
-        </div>
-        <div class="col-3 text">{{hero.name}}</div>
+        <div class="col-1 text">{{hero.id}}</div>
+        <div class="col-3 text"> <span class="circle col-2">{{hero.name | shortName}}</span> {{hero.name}}</div>
         <div class="col-2 text">{{hero.company}}</div>
         <div class="col-3 text">{{hero.phone}}</div>
-        <div class="col-2 text"><span class="status" [class]="hero.whats">{{hero.whats}}</span></div>
-        <div class="col-1"><button><i class="bi bi-three-dots-vertical"></i></button></div>
+        <div class="col-2 text"><span class="status" [class]="hero.relationship">{{hero.relationship}}</span></div>
+        <div class="col-1"><a routerLink="/detail/{{hero.id}}"><button><i class="bi bi-three-dots-vertical"></i></button></a></div>
       </div>
     </div>
     <!-- <button class="delete" title="delete hero"

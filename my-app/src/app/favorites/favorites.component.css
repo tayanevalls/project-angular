@@ -13,38 +13,41 @@ a {
 *, *::after, *::before {
   box-sizing: border-box;
 }
-h3 {
-  text-align: center;
-  margin-bottom: 0;
-}
-h4 {
-  position: relative;
-}
 .grid {
   margin: 0;
 }
-.col-1-4 {
-  width: 25%;
-}
 .module {
-  padding: 20px;
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+  margin: .7em 0;
+  padding: .3em 0;
+  height: 5em;
+  border-radius: 4px;
+  box-shadow: 0 0 0.875rem 0 rgb(41 48 66 / 5%);
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .2s ease-in-out;
+}
+.module h4{
+  width: 100%;
   text-align: center;
-  color: #eee;
-  max-height: 120px;
-  min-width: 120px;
-  background-color: #3f525c;
-  border-radius: 2px;
+  color: #F79489;
+  font-weight: 400;
+  margin: 0;
 }
 .module:hover {
-  background-color: #EEE;
   cursor: pointer;
-  color: #607d8b;
+  transform: scale(1.1);
+  color: #FADCD9;
 }
 .grid-pad {
   padding: 10px 0;
 }
 .grid-pad > [class*='col-']:last-of-type {
-  padding-right: 20px;
+  padding-right: 0;
 }
 @media (max-width: 600px) {
   .module {

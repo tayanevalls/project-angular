@@ -12,9 +12,9 @@ import { NavBarComponent } from './navbar/navbar.component';
 import { ShortNamePipe } from './short-name.pipe';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { ContactsComponent } from './contacts/contacts.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 //import { MessagesComponent } from './messages/messages.component';
 
@@ -34,8 +34,8 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
   ],
   declarations: [
     AppComponent,
-    DashboardComponent,
-    HeroesComponent,
+    FavoritesComponent,
+    ContactsComponent,
     HeroDetailComponent,
     TopBarComponent,
     NavBarComponent,

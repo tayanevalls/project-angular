@@ -1,4 +1,32 @@
-/* HeroesComponent's private CSS styles */
+/* ContactComponent's private CSS styles */
+
+.dropdown-toggle{
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6c757d;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.dropdown-toggle i{
+  vertical-align: text-bottom;
+}
+.dropdown-toggle::after{
+  display: none;
+}
+.dropdown-toggle.show .bi-chevron-down::before{
+  transform: rotate(180deg);
+}
+
 .heroes {
   margin: 0 0 2em 0;
   list-style-type: none;
@@ -38,9 +66,7 @@
   font-size: 0.8rem;
   color: #fff ;
 }
-.form-control {
-  font-size: 0.8rem;
-}
+
 
 .heroes a {
   text-decoration: none;
@@ -66,6 +92,7 @@
   padding-top: 0.3rem;
   font-size: 1em;
   font-weight: 400;
+  margin-right: 10px;
 }
 
 .heroes button{
@@ -76,14 +103,21 @@
   color: #444;
   border: none;
   border-radius: 100px;
-  padding: 5px 16px;
+  padding: 0 15px;
   margin-left: 8px;
+  
 }
-.heroes .status.yes{
-  background: #c3e6ae;
+.heroes .status.Friend{
+  background: #e8c7f3;
+  color: #906a9d;
 }
-.heroes .status.no{
-  background: #ff7676;
+.heroes .status.Work{
+  background: #ffe7b0;
+  color: #b39d6a;
+}
+.heroes .status.Family{
+  background: #bde6ed;
+  color: #6ba2ab;
 }
 button {
   border: none;

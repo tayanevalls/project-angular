@@ -18,13 +18,14 @@ nav a {
     float: left;
     padding-bottom: 0.59rem;
     border-radius: 0;
-    color: #F79489;
+    color:#6c757d;
     font-size: 0.9rem;
     outline: none;
     box-shadow:none;
 }
 
 nav a.active-link{
+    color: #F79489;
     border-bottom: 2px solid #F79489;
 
 }

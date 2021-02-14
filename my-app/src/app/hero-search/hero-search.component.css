@@ -3,12 +3,26 @@
   border-bottom: 1px solid gray;
   border-left: 1px solid gray;
   border-right: 1px solid gray;
-  width: 195px;
-  height: 16px;
+  width: 167px;
+  height: 30px;
   padding: 5px;
   background-color: white;
   cursor: pointer;
   list-style-type: none;
+}
+.form-control{
+  border-top-left-radius: .25rem !important;
+  border-bottom-left-radius: .25rem !important;
+}
+.input-group i {
+  font-size: 1.2rem;
+  margin-right: 0.9rem;
+  color:#F79489;
+
+}
+
+.input-group-text{
+  padding: 0;
 }
 
 .search-result li:hover {
@@ -32,7 +46,7 @@
 
 ul.search-result {
   margin-top: 0;
-  padding-left: 0;
+  padding-left: 29px;
 }
 
 
