@@ -13,6 +13,7 @@ import { ShortNamePipe } from './short-name.pipe';
 
 import { AppComponent } from './app.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { ProfileComponent } from './profile/profile.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
@@ -38,6 +39,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     ContactsComponent,
     HeroDetailComponent,
     TopBarComponent,
+    ProfileComponent,
     NavBarComponent,
     ShortNamePipe,
     //MessagesComponent,

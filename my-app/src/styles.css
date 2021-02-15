@@ -1,4 +1,4 @@
-/* Top Bar */
+
 
 
 body{
@@ -11,12 +11,48 @@ body{
     text-align: left;
     background-color: #f7f9fc;
 }
+/* Button */
+
+.btn-secondary {
+  color: #74bf5c;
+  background-color: transparent;
+  border: 2px solid #74bf5c;
+}
+.btn-secondary:hover {
+  background-color: #74bf5c;
+  color: #fff;
+  border: 2px solid #74bf5c;
+}
+.btn-primary{
+  color: #FFFF;
+  background-color: #F79489;
+  border-color: #F79489;
+  border: 2px solid #F79489;
+}
+.btn-primary:hover {
+  color: #F79489;
+  background-color: transparent;
+  border: 2px solid #F79489;
+}
+.btn {
+  font-size: 0.8rem;
+}
+.btn i{
+  font-size: 1rem;
+  align-items: center;
+  display: inline-flex;
+  vertical-align: sub;
+  padding-right: 7px;
+}
 .btn:focus{
   box-shadow: none;
 }
 .bg-light {
   background-color: #f7f9fc;
 }
+
+/* Form */
+
 .form-control {
   font-size: 0.8rem;
 }
@@ -25,20 +61,38 @@ body{
   text-align: right;
 
 }
-app-top-bar {
-  width: 100%;
-  height: 68px;
-  padding: 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f8f9fa;
+.mr-auto, .mx-auto {
+  margin-right: auto!important;
 }
-
-app-top-bar h1 {
-  color: white;
-  margin: 0;
+button.close {
+  float: right;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+.ml-2, .mx-2 {
+  margin-left: .5rem!important;
+}
+.mb-1, .my-1 {
+  margin-bottom: .25rem!important;
+}
+button.close {
+  padding: 0 !important;
+  background-color: transparent;
+  border: 0;
+}
+.media-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.icon-sm {
+  font-size: 1.0625rem!important;
+}
+p:last-child {
+  margin-bottom: 0;
 }
 
 /*
@@ -46,3 +100,4 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
 */
+

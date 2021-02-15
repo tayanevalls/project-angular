@@ -1,0 +1,74 @@
+<div class="row" *ngIf="hero">
+    <h4>Details</h4>
+        <div class="col-lg-4">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3>{{hero.name}}</h3>
+
+              <!--  <div>
+                  <label>name:
+                    <input [(ngModel)]="hero.name" placeholder="name"/>
+                  </label>
+                </div>
+                <button (click)="goBack()" class="btn btn-primary">go back</button>
+                <button (click)="save()"class="btn btn-secondary">save</button>-->
+              </div>
+            
+            </div>
+        </div>
+        <div class="card col-lg-8">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item px-0 py-6">
+                  <div class="media align-items-center">
+                      <div class="media-body">
+                          <p class="small text-muted mb-0">Country</p>
+                          <p>Warsaw, Poland</p>
+                      </div>
+                      <i class="text-muted icon-sm fe-globe"></i>
+                  </div>
+              </li>
+
+              <li class="list-group-item px-0 py-6">
+                  <div class="media align-items-center">
+                      <div class="media-body">
+                          <p class="small text-muted mb-0">Phone</p>
+                          <p>{{hero.phone}}</p>
+                      </div>
+                      <i class="text-muted icon-sm fe-mic"></i>
+                  </div>
+              </li>
+
+              <li class="list-group-item px-0 py-6">
+                  <div class="media align-items-center">
+                      <div class="media-body">
+                          <p class="small text-muted mb-0">Email</p>
+                          <p>anna@gmail.com</p>
+                      </div>
+                      <i class="text-muted icon-sm bi bi-envelope-fill"></i>
+                  </div>
+              </li>
+
+              <li class="list-group-item px-0 py-6">
+                  <div class="media align-items-center">
+                      <div class="media-body">
+                          <p class="small text-muted mb-0">Company</p>
+                          <p>{{hero.company}}</p>
+                      </div>
+                      <i class="text-muted icon-sm fe-clock"></i>
+                  </div>
+              </li>
+          </ul>
+          </div>
+        </div> 
+
+</div>
+
+
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

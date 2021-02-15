@@ -10,9 +10,9 @@ export class InMemoryDataService implements InMemoryDbService {
     const heroes = [
       { id: 11, name: 'Juliana Carvalho',  company: '-',  phone: '11 99862-4832',   relationship:'Friend'},
       { id: 12, name: 'Diego Prado',    company: '-',  phone: '11 99862-4832',   relationship:'Family'},
-      { id: 13, name: 'Laura Silva',    company: 'GOL',  phone: '11 99862-4832',   relationship:'Work'},
+      { id: 13, name: 'Laura Silva',    company: 'Nasa',  phone: '11 99862-4832',   relationship:'Work'},
       { id: 14, name: 'Pedro Almeida',    company: '-',  phone: '11 99862-4832',   relationship:'Friend'},
-      { id: 15, name: 'Thais Valls',    company: 'GOL',  phone: '11 99862-4832',   relationship:'Work'},
+      { id: 15, name: 'Thais Valls',    company: 'Nasa',  phone: '11 99862-4832',   relationship:'Work'},
       { id: 16, name: 'Jéssica Nunes',  company: '-',  phone: '11 99862-4832',   relationship:'Family'},
     ];
     return {heroes};

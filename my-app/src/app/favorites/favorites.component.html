@@ -1,22 +1,31 @@
 <div class="row">
-  <div class="col-10">     
+  <div class="col-sm-5 col-lg-10">     
     <h4>Favorites</h4>
   </div>
   <div class="col">
     <app-hero-search></app-hero-search>
   </div>
 </div>
-<div class="grid grid-pad">
-  <a *ngFor="let hero of heroes" class="col-3"
-      routerLink="/detail/{{hero.id}}">
-    <div class="module hero">
-      <h4>{{hero.name}}</h4>
-    </div>
-  </a>
+<div class="row">
+<a *ngFor="let hero of heroes" class="col-sm-3" routerLink="/profile/{{hero.id}}">
+<div class="card">
+  <div class="row no-gutters">
+      <div class="col-sm-7">
+          <div class="card-body">
+              <h5 class="card-title">{{hero.name}}</h5>
+              <ul>
+                <li><i class="bi bi-telephone-fill"></i> {{hero.phone}}</li>
+                <li><i class="bi bi-briefcase-fill"></i> {{hero.company}}</li>
+                <li><i class="bi bi-star-fill"></i> {{hero.relationship}}</li>
+              </ul>
+            
+              <a href="#" class="btn btn-primary">View Profile</a>
+          </div>
+      </div>
+  </div>
 </div>
-
-
-
+</a>
+</div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

@@ -3,12 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { FavoritesComponent } from './favorites/favorites.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/heroes', pathMatch: 'full' },
+  { path: '', redirectTo: '/contacts', pathMatch: 'full' },
   { path: 'favorites', component: FavoritesComponent },
-  { path: 'detail/:id', component: HeroDetailComponent },
+  { path: 'profile/:id', component: ProfileComponent },
   { path: 'contacts', component: ContactsComponent }
 ];
 
