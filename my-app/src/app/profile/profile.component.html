@@ -1,10 +1,10 @@
-<div class="row" *ngIf="hero">
+<div *ngIf="hero">
     <h4>Details</h4>
+    <div class="row">
         <div class="col-lg-4">
             <div class="card text-center">
               <div class="card-body">
                 <h3>{{hero.name}}</h3>
-
               <!--  <div>
                   <label>name:
                     <input [(ngModel)]="hero.name" placeholder="name"/>
@@ -14,6 +14,10 @@
                 <button (click)="save()"class="btn btn-secondary">save</button>-->
               </div>
             
+            </div>
+            <div class="card col-lg-12">
+              <div class="card-body"> dqww</div>
+             
             </div>
         </div>
         <div class="card col-lg-8">
@@ -61,6 +65,7 @@
           </ul>
           </div>
         </div> 
+      </div>
 
 </div>
 
