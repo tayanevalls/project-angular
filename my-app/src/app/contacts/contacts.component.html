@@ -29,6 +29,7 @@
 </div>
 
 <ul class="heroes">
+  <a *ngFor="let hero of heroes" class="col-sm-3" routerLink="/profile/{{hero.id}}">
   <li *ngFor="let hero of heroes" class="grow">
     <div class="container">
       <div class="row">
@@ -44,6 +45,7 @@
       (click)="delete(hero)">x</button>-->
 
   </li>
+</a>
 </ul>
 
 <!-- 

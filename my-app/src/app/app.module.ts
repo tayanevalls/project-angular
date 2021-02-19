@@ -15,10 +15,14 @@ import { AppComponent } from './app.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotesComponent } from './notes/notes.component';
+import { CalendarComponent } from './calendar/calendar.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 //import { MessagesComponent } from './messages/messages.component';
+
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 @NgModule({
   imports: [
@@ -26,13 +30,19 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    })
+    
   ],
   declarations: [
     AppComponent,
@@ -42,10 +52,12 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     TopBarComponent,
     ProfileComponent,
     NotesComponent,
+    CalendarComponent,
     NavBarComponent,
     ShortNamePipe,
     //MessagesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+
   ],
   bootstrap: [ AppComponent ]
 })

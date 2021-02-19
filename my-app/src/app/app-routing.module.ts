@@ -5,13 +5,15 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotesComponent } from './notes/notes.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/contacts', pathMatch: 'full' },
   { path: 'favorites', component: FavoritesComponent },
   { path: 'profile/:id', component: ProfileComponent },
   { path: 'contacts', component: ContactsComponent },
-  { path: 'notes', component: NotesComponent }
+  { path: 'notes', component: NotesComponent },
+  { path: 'calendar', component: CalendarComponent }
 ];
 
 @NgModule({
