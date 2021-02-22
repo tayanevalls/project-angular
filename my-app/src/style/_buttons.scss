@@ -1,0 +1,39 @@
+/* Button */
+
+  .btn {
+    i{
+        font-size: 1rem;
+        align-items: center;
+        display: inline-flex;
+        vertical-align: sub;
+        padding-right: 7px;
+      }
+      &:focus{
+        box-shadow: none;
+      }
+
+      &.btn-primary{
+        color: #FFFF;
+        background-color: #F79489;
+        border-color: #F79489;
+        border: 2px solid #F79489;
+
+        &:hover, &:focus{
+            color: #F79489;
+            background-color: transparent;
+            border: 2px solid #F79489;
+
+        }
+      }
+  }
+  
+  .btn-secondary {
+    color: #74bf5c;
+    background-color: transparent;
+    border: 2px solid #74bf5c;
+  }
+  .btn-secondary:hover {
+    background-color: #74bf5c;
+    color: #fff;
+    border: 2px solid #74bf5c;
+  }

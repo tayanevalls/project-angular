@@ -1,0 +1,19 @@
+@import 'variables';
+
+.form-signin {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 35px 20px;
+    margin: auto;
+    border: 1px solid #cccccc;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    i{
+        color:$color-brand;
+        font-size: 2rem;
+        text-align: center;
+        display: block;
+        margin-bottom: 20px;
+    }
+}

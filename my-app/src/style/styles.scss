@@ -1,8 +1,31 @@
+@import 'buttons';
+@import 'layout';
+@import 'variables';
+@import 'forms';
 
+html, body{
+  height: 100%;
+  display: grid;
+}
+
+.dot-flashing {
+  margin: auto;
+
+}
+
+mark {
+  display: inline-block;
+  line-height: 0em;
+  padding-bottom: 0.5em;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  color: #6c757d;
+  background-color: #ffddd9;
+}
 
 
 body{
-  margin: 0;
     font-family: Poppins,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;
     font-size: .825rem;
     font-weight: 400;
@@ -10,60 +33,32 @@ body{
     color: #6c757d;
     text-align: left;
     background-color: #f7f9fc;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
-/* Button */
 
-.btn-secondary {
-  color: #74bf5c;
-  background-color: transparent;
-  border: 2px solid #74bf5c;
+a, .btn-link{
+  color:#F79489;
+  text-decoration: none;
 }
-.btn-secondary:hover {
-  background-color: #74bf5c;
-  color: #fff;
-  border: 2px solid #74bf5c;
+a:hover, .btn-link:hover{
+  color:#F79489;
+  text-decoration: underline;
 }
-.btn-primary{
-  color: #FFFF;
-  background-color: #F79489;
-  border-color: #F79489;
-  border: 2px solid #F79489;
-}
-.btn-primary:hover {
-  color: #F79489;
-  background-color: transparent;
-  border: 2px solid #F79489;
-}
-.btn {
-  font-size: 0.8rem;
-}
-.btn i{
-  font-size: 1rem;
-  align-items: center;
-  display: inline-flex;
-  vertical-align: sub;
-  padding-right: 7px;
-}
-.btn:focus{
-  box-shadow: none;
-}
-.bg-light {
-  background-color: #f7f9fc;
-}
+
 
 /* Form */
 
-.form-control {
-  font-size: 0.8rem;
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #F79489;
+  outline: 0;
+  box-shadow:0 0 0 0.25rem rgb(247 148 137 / 21%);
 }
-.float-right{
-  float: right;
-  text-align: right;
 
-}
-.mr-auto, .mx-auto {
-  margin-right: auto!important;
-}
+
 button.close {
   float: right;
   font-size: 1.5rem;

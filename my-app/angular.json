@@ -26,12 +26,18 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/style"
+              ]
+            },
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-              "src/styles.css",
-              "node_modules/angular-calendar/css/angular-calendar.css"
+              "node_modules/angular-calendar/css/angular-calendar.css",
+              "node_modules/three-dots/dist/three-dots.css",
+              "src/style/styles.scss" 
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -39,6 +45,33 @@
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
               ]
           },
+          "dependencies": {
+            "@angular/common": "^8.0.0",
+            "@angular/compiler": "^8.0.0",
+            "@angular/core": "^8.0.0",
+            "@angular/forms": "^8.0.0",
+            "@angular/platform-browser": "^8.0.0",
+            "@angular/platform-browser-dynamic": "^8.0.0",
+            "@angular/router": "^8.0.0",
+            "core-js": "^3.1.3",
+            "rxjs": "^6.3.3",
+            "zone.js": "^0.9.1"
+        },
+        "devDependencies": {
+          "@types/node": "^12.0.7",
+          "angular2-template-loader": "^0.6.2",
+          "css-loader": "^2.1.1",
+          "html-loader": "^0.5.5",
+          "html-webpack-plugin": "^3.2.0",
+          "less": "^3.0.4",
+          "less-loader": "^5.0.0",
+          "style-loader": "^0.23.1",
+          "ts-loader": "^6.0.1",
+          "typescript": "^3.1.3",
+          "webpack": "^4.32.2",
+          "webpack-cli": "^3.1.2",
+          "webpack-dev-server": "^3.7.0"
+      },
           "configurations": {
             "production": {
               "fileReplacements": [
@@ -98,7 +131,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/style/styles.scss"
             ],
             "scripts": []
           }
@@ -129,6 +162,12 @@
           }
         }
       }
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss",
+      "styleext": "scss"
     }
   },
   "defaultProject": "my-app"

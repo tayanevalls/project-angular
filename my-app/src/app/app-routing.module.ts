@@ -23,11 +23,13 @@ const routes: Routes = [
       { path: '**', redirectTo: '' }
 ];
 
-@NgModule({
+NgModule({
   imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ]
 })
-export class AppRoutingModule {}
+
+export const AppRoutingModule = RouterModule.forRoot(routes);
+
 
 
 /*
