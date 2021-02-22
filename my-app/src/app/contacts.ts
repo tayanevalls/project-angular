@@ -1,14 +1,9 @@
-/* HeroDetailComponent's private CSS styles */
-
-h3{
-  color: #F79489;
-  font-size: 1rem;
+export interface Contacts {
+  id: number;
+  name: string;
+  phone: string;
+  company: string;
 }
-
-.card{
-  margin-top: 15px;
-}
-
 
 
 /*

@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { fakeBackendProvider } from './_helpers';
+
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home';
+import { LoginComponent } from './login';
+import { RegisterComponent } from './register';
+import { AlertComponent } from './_components';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -11,23 +20,22 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { NavBarComponent } from './navbar/navbar.component';
 import { ShortNamePipe } from './short-name.pipe';
 
-import { AppComponent } from './app.component';
-import { FavoritesComponent } from './favorites/favorites.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotesComponent } from './notes/notes.component';
 import { CalendarComponent } from './calendar/calendar.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { HeroSearchComponent } from './hero-search/hero-search.component';
 //import { MessagesComponent } from './messages/messages.component';
 
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
+import { ExcelService } from './services/excel.service';
+
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     
@@ -44,19 +52,30 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     })
     
   ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    
+    [ExcelService],
+
+    // provider used to create fake backend
+    fakeBackendProvider
+],
+
   declarations: [
     AppComponent,
-    FavoritesComponent,
     ContactsComponent,
-    HeroDetailComponent,
     TopBarComponent,
     ProfileComponent,
     NotesComponent,
     CalendarComponent,
     NavBarComponent,
     ShortNamePipe,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    AlertComponent
     //MessagesComponent,
-    HeroSearchComponent,
 
   ],
   bootstrap: [ AppComponent ]

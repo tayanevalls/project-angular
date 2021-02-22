@@ -1,41 +1,58 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { ExcelService } from '../services/excel.service';
 
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.css']
 })
-export class ContactsComponent implements OnInit {
-  heroes: Hero[];
+export class ContactsComponent{
+  
+  title = 'exportExcelInAngular';
+  dataOfContacts: any = [{
 
-  constructor(private heroService: HeroService) { }
+    
+    id: 11,
+    name: 'Thais Valls',
+    company: 'Nasa',
+    phone: '11 99862-4832',
+    relationship: 'Family'
+  },
+  {
+    id: 12,
+    name: 'Juliana Carvalho',
+    company: 'Nasa',
+    phone: '11 99862-4832',
+    relationship: 'Friend'
+  },
+  {
+    id: 13,
+    name: 'Pedro Almeida',
+    company: 'Nasa',
+    phone: '11 99862-4832',
+    relationship: 'Work'
+  },
+    {
+      id: 14,
+      name: 'Jéssica Nunes',
+      company: 'Nasa',
+      phone: '11 99862-4832',
+      relationship: 'Friend'
+    },
+  {
+    id: 15,
+    name: 'Laura Silva',
+    company: 'Nasa',
+    phone: '11 99862-4832',
+    relationship: 'Work'
+  }];
+  constructor(private excelService:ExcelService){
 
-  ngOnInit() {
-    this.getHeroes();
   }
-
-  getHeroes(): void {
-    this.heroService.getHeroes()
-    .subscribe(heroes => this.heroes = heroes);
+  exportAsXLSX():void {
+    this.excelService.exportAsExcelFile(this.dataOfContacts, 'contacts_data');
   }
-
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.heroService.addHero({ name } as Hero)
-      .subscribe(hero => {
-        this.heroes.push(hero);
-      });
-  }
-
-  delete(hero: Hero): void {
-    this.heroes = this.heroes.filter(h => h !== hero);
-    this.heroService.deleteHero(hero).subscribe();
-  }
-
 }
 
 

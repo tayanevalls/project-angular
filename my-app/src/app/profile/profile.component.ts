@@ -1,42 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
-
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { Component} from '@angular/core';
+import { Contacts } from '../contacts';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: [ './profile.component.css' ]
 })
-export class ProfileComponent implements OnInit {
-  hero: Hero;
+export class ProfileComponent {
+    dataOfContacts: any[] ;
 
-  constructor(
-    private route: ActivatedRoute,
-    private heroService: HeroService,
-    private location: Location
-  ) {}
-
-  ngOnInit(): void {
-    this.getHero();
-  }
-
-  getHero(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.heroService.getHero(id)
-      .subscribe(hero => this.hero = hero);
-  }
-
-  goBack(): void {
-    this.location.back();
-  }
-
-  save(): void {
-    this.heroService.updateHero(this.hero)
-      .subscribe(() => this.goBack());
-  }
 }
 
 

@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light container">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+<nav class="row navbar navbar-expand-lg navbar-light bg-light container">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/">
             <i class="bi bi-suit-heart-fill"></i> My app
         </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,9 +13,10 @@
             <span class="notification--num">5</span>
           </li>
             <li class="nav-item user">
-            <span><img src="/../../assets/img/avatar.jpg" class="avatar img-fluid rounded-circle mr-1" alt="Kelly Clark">Tayane Valls</span>
+            <span><img src="/../../assets/img/avatar.jpg" class="avatar img-fluid rounded-circle mr-1" alt="">Hi {{currentUser.firstName}} - <a class="" (click)="logout()">Logout</a></span>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+

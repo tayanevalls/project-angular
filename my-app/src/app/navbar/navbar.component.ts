@@ -1,4 +1,11 @@
 import { Component } from '@angular/core';
+import { User } from '../_models';
+import { UserService, AuthenticationService } from '../_services';
+
+import { Subscription } from 'rxjs';
+import { first } from 'rxjs/operators';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -9,7 +16,27 @@ import { Component } from '@angular/core';
 
 export class NavBarComponent {
     title = 'Hello : )';
+    currentUser: User;
+    users: User[] = [];
+    currentUserSubscription: Subscription;
+
+    logout() {
+      this.authenticationService.logout();
+      this.router.navigate(['/login']);
+  }
+
+    constructor(
+      private router: Router,
+      private authenticationService: AuthenticationService,
+      private userService: UserService
+  ) {
+      this.currentUserSubscription = this.authenticationService.currentUser.subscribe(user => {
+          this.currentUser = user;
+      });
+  }
 }
+
+
 
 
 /*

@@ -1,23 +1,16 @@
+
+<app-nav-bar></app-nav-bar>
+
 <div class="row">
   <div class="col">     
     <h4>My Contacts</h4>
   </div>
   <div class="col-10 col-sm-auto">						
-    <a class="btn btn-secondary"><i class="bi bi-file-earmark-bar-graph-fill"></i>Export to Excel</a>
+    <a class="btn btn-secondary" (click)="exportAsXLSX()"><i class="bi bi-file-earmark-bar-graph-fill"></i>Export to Excel</a>
 </div>
-  <div class="col-10 col-sm-auto">
-    <div class="input-group">
-      <input #heroName type="text" class="form-control" placeholder="Enter Name" value="" required="">
-      <span class="input-group-text">
-        <button (click)="add(heroName.value); heroName.value=''">
-          Add New User
-      </button>
-      </span>
 
-  </div>
-</div>
-</div>
-<div class="container head">
+
+<div class="container-fluid head">
   <div class="row">
     <div class="col-1">#</div>
     <div class="col-3">Name</div>
@@ -28,26 +21,22 @@
   </div>
 </div>
 
-<ul class="heroes">
-  <a *ngFor="let hero of heroes" class="col-sm-3" routerLink="/profile/{{hero.id}}">
-  <li *ngFor="let hero of heroes" class="grow">
+
+<ul class="contacts">
+  <li class="grow" *ngFor="let item of dataOfContacts">
     <div class="container">
       <div class="row">
-        <div class="col-1 text">{{hero.id}}</div>
-        <div class="col-3 text"> <span class="circle col-2">{{hero.name | shortName}}</span> {{hero.name}}</div>
-        <div class="col-2 text">{{hero.company}}</div>
-        <div class="col-3 text">{{hero.phone}}</div>
-        <div class="col-2 text"><span class="status" [class]="hero.relationship">{{hero.relationship}}</span></div>
-        <div class="col-1"><a routerLink="/detail/{{hero.id}}"><button><i class="bi bi-three-dots-vertical"></i></button></a></div>
+        <div class="col-1 text">{{item.id}}</div>
+        <div class="col-3 text"><span class="circle col-2">{{item.name | shortName}}</span>{{item.name}}</div>
+        <div class="col-2 text">{{item.name}}</div>
+        <div class="col-3 text">{{item.phone}}</div>
+        <div class="col-2 text"><span class="status" [class]="item.relationship">{{item.relationship}}</span></div>
+        <div class="col-1"><a routerLink="/profile/{{item.id}}"><button><i class="bi bi-three-dots-vertical"></i></button></a></div>
       </div>
     </div>
-    <!-- <button class="delete" title="delete hero"
-      (click)="delete(hero)">x</button>-->
-
   </li>
-</a>
 </ul>
-
+</div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

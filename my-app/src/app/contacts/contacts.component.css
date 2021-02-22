@@ -27,13 +27,13 @@
   transform: rotate(180deg);
 }
 
-.heroes {
+.contacts {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
 
 }
-.heroes li {
+.contacts li {
   position: relative;
   cursor: pointer;
   background-color: #fff;
@@ -47,13 +47,13 @@
   align-items: center;
   justify-content: space-between;
 }
-.heroes li:nth-child(even) .circle{
+.contacts li:nth-child(even) .circle{
   background: #F8AFA6;
 }
-.heroes li.grow{
+.contacts li.grow{
   transition: all .2s ease-in-out;
 }
-.heroes li.grow:hover{
+.contacts li.grow:hover{
   transform: scale(1.1);
 }
 .input-group-text{
@@ -68,12 +68,12 @@
 }
 
 
-.heroes a {
+.contacts a {
   text-decoration: none;
   color: gray ;
 }
 
-.heroes .badge {
+.contacts .badge {
   display: inline-block;
   font-size: small;
   color: #fff ;
@@ -81,7 +81,7 @@
   text-align: center;
   margin-right: .8em;
 }
-.heroes .circle {
+.contacts .circle {
   height: 30px;
   width: 30px;
   color: #fff ;
@@ -95,11 +95,11 @@
   margin-right: 10px;
 }
 
-.heroes button{
+.contacts button{
   float: right;
 }
 
-.heroes .status{
+.contacts .status{
   color: #444;
   border: none;
   border-radius: 100px;
@@ -107,15 +107,15 @@
   margin-left: 8px;
   
 }
-.heroes .status.Friend{
+.contacts .status.Friend{
   background: #e8c7f3;
   color: #906a9d;
 }
-.heroes .status.Work{
+.contacts .status.Work{
   background: #ffe7b0;
   color: #b39d6a;
 }
-.heroes .status.Family{
+.contacts .status.Family{
   background: #bde6ed;
   color: #6ba2ab;
 }
