@@ -5,7 +5,7 @@ import { ExcelService } from '../services/excel.service';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css']
+  styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent{
   
@@ -13,35 +13,35 @@ export class ContactsComponent{
   dataOfContacts: any = [{
 
     
-    id: 11,
+    id: 1,
     name: 'Thais Valls',
     company: 'Nasa',
     phone: '11 99862-4832',
     relationship: 'Family'
   },
   {
-    id: 12,
+    id: 2,
     name: 'Juliana Carvalho',
     company: 'Nasa',
     phone: '11 99862-4832',
     relationship: 'Friend'
   },
   {
-    id: 13,
+    id: 3,
     name: 'Pedro Almeida',
     company: 'Nasa',
     phone: '11 99862-4832',
     relationship: 'Work'
   },
     {
-      id: 14,
+      id: 4,
       name: 'Jéssica Nunes',
       company: 'Nasa',
       phone: '11 99862-4832',
       relationship: 'Friend'
     },
   {
-    id: 15,
+    id: 5,
     name: 'Laura Silva',
     company: 'Nasa',
     phone: '11 99862-4832',

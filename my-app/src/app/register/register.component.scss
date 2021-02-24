@@ -1,9 +1,9 @@
 @import 'variables';
 
 
-// Login
+// Register
 
-.login{
+.register{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,9 +11,9 @@
     text-align: center;
     min-height: 100vh;
 }
-.form-signin {
+.form-signup {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     padding: 10px 35px 20px;
     margin: 0 auto;
     border: 1px solid #f2f2f2;
@@ -36,9 +36,8 @@
         margin-bottom: 20px;
     }
 }
-
-.register{
-    max-width: 400px;
+.login{
+    max-width: 500px;
     width: 100%;
     margin: 0 auto;
     align-self: center;

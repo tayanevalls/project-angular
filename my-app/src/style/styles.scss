@@ -3,29 +3,14 @@
 @import 'variables';
 @import 'forms';
 
-html, body{
-  height: 100%;
-  display: grid;
+*, ::after, ::before {
+  box-sizing: content-box;
 }
 
-.dot-flashing {
-  margin: auto;
-
-}
-
-mark {
-  display: inline-block;
-  line-height: 0em;
-  padding-bottom: 0.5em;
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
-  color: #6c757d;
-  background-color: #ffddd9;
-}
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 
-body{
+html > body {
     font-family: Poppins,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;
     font-size: .825rem;
     font-weight: 400;
@@ -34,17 +19,31 @@ body{
     text-align: left;
     background-color: #f7f9fc;
     align-items: center;
-    padding-top: 40px;
     padding-bottom: 40px;
-}
 
-a, .btn-link{
-  color:#F79489;
-  text-decoration: none;
-}
-a:hover, .btn-link:hover{
-  color:#F79489;
-  text-decoration: underline;
+    a, .btn-link{
+      color:$color-brand;
+      text-decoration: none;
+    }
+    a:hover, .btn-link:hover{
+      color:$color-brand;
+      text-decoration: underline;
+    }
+    .dot-flashing {
+      margin: auto;
+    
+    }
+    mark {
+      display: inline-block;
+      line-height: 0em;
+      padding-bottom: 0.5em;
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      color: #6c757d;
+      background-color: #ffddd9;
+    }
+    
 }
 
 
@@ -53,31 +52,11 @@ a:hover, .btn-link:hover{
 .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #F79489;
+  border-color: $color-brand;
   outline: 0;
   box-shadow:0 0 0 0.25rem rgb(247 148 137 / 21%);
 }
 
-
-button.close {
-  float: right;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  opacity: .5;
-}
-.ml-2, .mx-2 {
-  margin-left: .5rem!important;
-}
-.mb-1, .my-1 {
-  margin-bottom: .25rem!important;
-}
-button.close {
-  padding: 0 !important;
-  background-color: transparent;
-  border: 0;
-}
 .media-body {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -96,3 +75,6 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
 */
 
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

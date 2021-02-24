@@ -1,6 +1,15 @@
 /* Button */
-
+@import 'variables';
+html > body {
   .btn {
+    &:hover{
+      text-decoration: none;
+    }
+    &.btn-block {
+      display: block;
+      width: 100%;
+
+  }
     i{
         font-size: 1rem;
         align-items: center;
@@ -14,26 +23,37 @@
 
       &.btn-primary{
         color: #FFFF;
-        background-color: #F79489;
-        border-color: #F79489;
-        border: 2px solid #F79489;
+        background-color: $color-brand;
+        border-color: $color-brand;
+        border: 2px solid $color-brand;
 
-        &:hover, &:focus{
-            color: #F79489;
+        &:hover{
+            color: $color-brand;
             background-color: transparent;
-            border: 2px solid #F79489;
+            border: 2px solid $color-brand;
+
+        }
+        &:focus, &:active, &:not(:disabled):not(.disabled):active{
+          color: #FFFF;
+          background-color: $color-brand;
+          border-color: $color-brand;
+          border: 2px solid $color-brand;
+
+      }
+        &:not(:disabled):not(.disabled):active:focus{
+          box-shadow: none;
 
         }
       }
+      &.btn-success {
+        color: $color-success !important;
+        background-color: transparent;
+        border: 2px solid $color-success;
+      }
+      &.btn-success:hover {
+        background-color: $color-success;
+        color: #fff !important;
+        border: 2px solid $color-success;
+      }
   }
-  
-  .btn-secondary {
-    color: #74bf5c;
-    background-color: transparent;
-    border: 2px solid #74bf5c;
-  }
-  .btn-secondary:hover {
-    background-color: #74bf5c;
-    color: #fff;
-    border: 2px solid #74bf5c;
-  }
+} 

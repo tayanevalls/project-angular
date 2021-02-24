@@ -1,7 +1,7 @@
-<nav class="row navbar navbar-expand-lg navbar-light bg-light container">
-    <div class="container">
+<nav class="row navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container no-padding">
         <a class="navbar-brand" routerLink="/">
-            <i class="bi bi-suit-heart-fill"></i> My app
+            <i class="bi bi-suit-heart-fill"></i><mark>My app</mark>
         </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,11 +9,20 @@
       <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <span><i class="bi bi-bell-fill"></i></span>
+            <span><i class="bi bi-bell"></i></span>
             <span class="notification--num">5</span>
-          </li>
-            <li class="nav-item user">
-            <span><img src="/../../assets/img/avatar.jpg" class="avatar img-fluid rounded-circle mr-1" alt="">Hi {{currentUser.firstName}} - <a class="" (click)="logout()">Logout</a></span>
+          </li> 
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="col-12 user"><span class="circle">{{currentUser.firstName | shortName}}{{currentUser.lastName | shortName }}</span></span> {{currentUser.firstName}} {{currentUser.lastName}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Meus dados</a>
+              <a class="dropdown-item" href="#">Configuraçōes</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#" (click)="logout()">Sair</a>
+            </div>
           </li>
         </ul>
       </div>

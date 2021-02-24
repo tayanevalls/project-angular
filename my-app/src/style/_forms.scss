@@ -1,10 +1,73 @@
-.form-control{
-    &.is-invalid{
-        border-color: $color-error;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ff7683' class='bi bi-exclamation-circle-fill' viewBox='0 0 16 16'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z'/%3E%3C/svg%3E");
-    }
-}
 
-.invalid-feedback{
-    color: $color-error;
+html > body {
+    .dropdown{
+
+        .dropdown-item{
+            color: #6c757d;
+            font-size: 0.825rem;
+
+            &:hover{
+                background-color: #f7f9fc;
+                text-decoration: none;
+            }
+        }
+        .nav-link{
+            text-decoration: none;
+        }
+        .dropdown-menu{
+            box-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 5%);
+            position: absolute;
+            &.show{
+                animation-name: dropdownAnimation;
+                animation-duration: .5s;
+                animation-iteration-count: 1;
+                animation-timing-function: ease;
+                animation-fill-mode: forwards;
+            }
+
+        }
+        .dropdown-toggle{
+            padding-top:0;
+            padding-bottom:0;
+            padding-left: 0;
+
+            &::after{
+                border: solid;
+                border-width: 0 2px 2px 0;
+                display: inline-block;
+                padding: 2px;
+                transform: rotate(
+            45deg
+            );
+                margin-left: .255em;
+                vertical-align: .255em;
+                content: "";
+            }
+
+        }
+    }
+    .form-control{
+        &.is-invalid{
+            border-color: $color-error;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ff7683' class='bi bi-exclamation-circle-fill' viewBox='0 0 16 16'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z'/%3E%3C/svg%3E");
+        }
+        &:focus {
+            color: #212529;
+            background-color: #fff;
+            border-color: $color-brand;
+            outline: 0;
+            box-shadow:0 0 0 0.25rem rgb(247 148 137 / 21%);
+          }
+    }
+
+    .invalid-feedback{
+        color: $color-error;
+    }
+
+    label {
+        margin-bottom: .2rem;
+    }
+    .form-group {
+        margin-bottom: 1rem;
+    }
 }

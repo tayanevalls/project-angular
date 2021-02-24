@@ -1,0 +1,44 @@
+section{
+    margin-top: 30px;
+}
+
+a{
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+hr{
+    background-color: #ccc;
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+    margin: .7em 0;
+    padding: .3em 0;
+    border-radius: 4px;
+    box-shadow: 0 0 0.875rem 0 rgb(41 48 66 / 5%);
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    &.grow{
+        transition: all .2s ease-in-out;
+        &:hover{
+            transform: scale(1.1);
+          }
+      }
+    .card-title{
+        font-size: 1rem;
+    }
+
+    h2{
+        color: #6c757d;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

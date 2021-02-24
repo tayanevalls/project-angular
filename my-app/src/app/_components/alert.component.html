@@ -1,1 +1,4 @@
-<div *ngIf="message" [ngClass]="message.cssClass">{{message.text}}</div>
+<div class="d-block" *ngIf="message" [ngClass]="message.cssClass">
+    <i class="bi bi-exclamation-circle-fill"></i>
+    <span>{{message.text}}</span>
+</div>
