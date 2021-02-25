@@ -24,6 +24,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NotesComponent } from './notes/notes.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { SettingsComponent } from './settings/settings.component';
 //import { MessagesComponent } from './messages/messages.component';
 
 import { CalendarModule, DateAdapter } from 'angular-calendar';
@@ -31,6 +32,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 import { ExcelService } from './services/excel.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ThemeToggleComponent } from './_components/theme-toggle/theme-toggle.component';
 
 @NgModule({
   imports: [
@@ -72,11 +74,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NotesComponent,
     CalendarComponent,
     NavBarComponent,
+    SettingsComponent,
     ShortNamePipe,
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    AlertComponent
+    AlertComponent,
+    ThemeToggleComponent
     //MessagesComponent,
 
   ],

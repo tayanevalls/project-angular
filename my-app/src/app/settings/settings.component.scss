@@ -17,7 +17,7 @@ hr{
     cursor: pointer;
     background-color: #fff;
     margin: .7em 0;
-    padding: .3em 0;
+    padding: .3em 0 0;
     border-radius: 4px;
     box-shadow: 0 0 0.875rem 0 rgb(41 48 66 / 5%);
     display: flex;
@@ -30,7 +30,32 @@ hr{
             transform: scale(1.1);
           }
       }
+    .card-body{
+        width: 100%;
+    }
     .card-title{
         font-size: 1rem;
+        margin-bottom: 1.4rem;
+    }
+    .card-header{
+        width: 100%;
+        background: transparent;
+        padding: 1rem 1.25rem;
+    }
+    .list-group{
+        width: 100%;
+        .list-group-item{
+            border-width: 0 0 1px;
+            padding: .75rem 1.25rem;
+            border-bottom: 1px solid rgb(184 184 184 / 13%);
+
+            &:last-child{
+                border: 0;
+            }
+            &.active {
+                z-index: 2;
+            }
+
+        }
     }
 }

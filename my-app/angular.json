@@ -41,7 +41,9 @@
               "src/style/styles.scss",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
               "node_modules/angular-calendar/css/angular-calendar.css",
-              "node_modules/three-dots/dist/three-dots.css"
+              "node_modules/three-dots/dist/three-dots.css",
+              "node_modules/@forevolve/bootstrap-dark/dist/css/toggle-bootstrap.min.css",
+              "node_modules/@forevolve/bootstrap-dark/dist/css/toggle-bootstrap-dark.min.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"

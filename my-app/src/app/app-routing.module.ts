@@ -9,6 +9,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { RegisterComponent } from './register';
 import { AuthGuard } from './_helpers';
 import { HomeComponent } from './home';
+import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'contacts', component: ContactsComponent },
   { path: 'notes', component: NotesComponent },
   { path: 'calendar', component: CalendarComponent },
+  { path: 'settings', component: SettingsComponent },
 
       // otherwise redirect to home
       { path: '**', redirectTo: '' }

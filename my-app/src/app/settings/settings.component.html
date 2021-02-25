@@ -1,0 +1,118 @@
+<app-nav-bar></app-nav-bar>
+<div class="row">
+<h4>Configuraçōes</h4>
+</div>
+<section>
+    <div class="row">
+        <div class="col-md-4 col-xl-3">
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Profile Settings</h5>
+                </div>
+
+                <div class="list-group list-group-flush" role="tablist">
+                    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#account" role="tab">Geral</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#password" role="tab">Senha e privacidade</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#users" role="tab">Usuários</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#notify" role="tab">Notificaçōes</a>
+                    <a class="list-group-item list-group-item-action" data-toggle="list" href="#delete" role="tab">Deletar conta</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-xl-9">
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="account" role="tabpanel">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Configurações gerais da conta</h5>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <label for="inputUsername">Nome</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <img alt="Chris Wood" src="assets/img/avatar.jpg" class="rounded-circle img-responsive mt-2" width="128" height="128">
+                                            <div class="mt-2">
+                                                <span class="btn btn-primary btn-sm"><i class="bi bi-cloud-arrow-up-fill"></i>Upload</span>
+                                            </div>
+                                            <small>For best results, use an image at least 128px by 128px in .jpg format</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="tab-pane fade" id="password" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Senha</h5>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="users" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Usuários</h5>
+                            <div class="col-sm-12">
+                                <table id="datatables-clients" class="table table-striped dataTable no-footer dtr-inline" style="width: 100%;" role="grid" aria-describedby="datatables-clients_info">
+                                <thead>
+                                    <tr role="row"><th class="sorting" 
+                                        tabindex="0" aria-controls="datatables-clients" rowspan="1" colspan="1" style="width: 127px;" 
+                                        aria-label="#: activate to sort column ascending">#</th>
+                                        <th class="sorting_asc" tabindex="0" aria-controls="datatables-clients" rowspan="1" colspan="1" style="width: 480px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Usuário</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatables-clients" rowspan="1" colspan="1" style="width: 407px;" aria-label="Company: activate to sort column ascending">Nome</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatables-clients" rowspan="1" colspan="1" style="width: 610px;" aria-label="Email: activate to sort column ascending">Data de criação</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatables-clients" rowspan="1" colspan="1" style="width: 610px;" aria-label="Email: activate to sort column ascending">Açōes</th>
+                                        
+                                </thead>
+                                <tbody>
+                                    
+                                <tr role="row" class="odd" *ngFor="let user of users">
+                                        <td class="dtr-control"><span class="circle">{{user.id}}</span></td>
+                                        <td class="sorting_1">{{user.username}}</td>
+                                        <td>{{user.firstName}} {{user.lastName}}</td>
+                                        <td>{{data | date:'dd/MM/yyyy HH:mm:ss'}}</td>
+                                        <td><a (click)="deleteUser(user.id)" class="text-danger">Delete</a></td>
+
+                                    </tr>
+                                    </tbody>
+                            </table>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="notify" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Notificaçōes</h5>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="delete" role="tabpanel">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Deletar conta</h5>
+                            <p>Tem certeza que deseja excluir a sua conta?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
